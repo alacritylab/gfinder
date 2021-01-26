@@ -8,6 +8,8 @@ gFinder is a website wich shows the best offers of buckwheet in Ukraine.
 To achieve this goal we are searching thru the offers of different stores and,
 calculating the price for kilo, showing you best deals for your buck.
 
+Deployed to [HEROKU](https://gfinder.herokuapp.com)
+
 Project using in core [NestJS](https://github.com/nestjs/nest) made with ❤️ by [💡AlacrityLab💡](https://www.alacritylab.io).
 
 
