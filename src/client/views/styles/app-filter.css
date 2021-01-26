@@ -1,0 +1,44 @@
+/*TODO: MOVE REPEATING/BASE STYLES*/
+.gfinder-filter-label {
+    font-family: Roboto, monospace;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 8px;
+}
+
+.gfinder-single-selected-filter .gfinder-filter-chip {
+    height: 50px;
+    padding: 10px;
+    font-Size: 16px;
+    background-color: #FFFFFF;
+}
+
+.gfinder-single-filter-option {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.gfinder-single-filter-option:hover {
+    background-color: #EBFFF9;
+}
+
+.gfinder-filter-chip svg {
+    color: #EF233C;
+}
+
+.gfinder-filter-chip svg:hover {
+    color: #EF233C;
+}
+
+.gfinder-filter-chip:hover {
+    background-color: #FFF0F3;
+    border-color: #EF233C;
+}
+
+.gfinder-select-general {
+    background-color: #FFFFFF;
+}

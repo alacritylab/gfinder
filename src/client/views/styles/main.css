@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@font-face {
+    font-family: "arkhipregular";
+    src: url("./fonts/Arkhip-Regular.otf") format("opentype");
+}
+
+body {
+    background: #F2F2F2;
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url("./images/grechka_bg.png");
+    background-repeat: no-repeat;
+}
+
+div {
+    color: #2D2D2D;
+}
+
+.bg-fit-image {
+    height: 155px;
+    background-size: contain !important;
+}
+
+.aligned-right {
+  text-align: right;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked {
+    color: #00BA88 !important;
+}
+
+.MuiCard-root{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.MuiCardActions-root{
+    margin-top: auto;
+}

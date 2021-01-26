@@ -1,0 +1,15 @@
+.gfinder-body-container {
+    padding-top: 40px;
+}
+
+.gfinder-pagination-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 25px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .gfinder-pagination-container {
+        justify-content: center;
+    }
+}

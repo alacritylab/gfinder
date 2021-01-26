@@ -1,0 +1,4 @@
+FROM nginx:alpine
+COPY ./docker/vhost.template /etc/nginx/conf.d/vhost.template
+COPY ./docker/30-gfinder-nginx.sh /docker-entrypoint.d/30-gfinder-nginx.sh
+RUN chmod +x /docker-entrypoint.d/30-gfinder-nginx.sh

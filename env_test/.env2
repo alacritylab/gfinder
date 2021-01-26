@@ -1,0 +1,35 @@
+# APP
+APP_ENV=dev
+APP_URL=http://localhost
+APP_PORT=3000
+
+# JWT AUTH
+JWT_SECRET_KEY=uAsBw6WxqD
+JWT_EXPIRATION_TIME=3600
+
+# DATABASE
+DB_TYPE=postgres
+DB_NAME=db_name
+DB_AUTH=true
+DB_USERNAME=gfinderapp
+DB_PASSWORD=gfinderapp
+DB_HOST=localhost
+DB_PORT=5432
+DB_DATABASE=gfinder-db
+DB_MODE=DEV
+DB_LOGGING=all
+RUN_MIGRATIONS=true
+
+
+# REDIS
+REDIS_USERNAME=gfinderapp
+REDIS_PASSWORD=gfinderapp
+REDIS_HOST=
+REDIS_PORT=
+
+#Minio
+MINIO_ENDPOINT=gfinderapp-minio
+MINIO_PORT=9000
+MINIO_ACCESS_KEY=minio
+MINIO_SECRET_KEY=miniosecret
+MINIO_BUCKET=gfinderapp

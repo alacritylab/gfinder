@@ -1,0 +1,57 @@
+version: "3"
+services:
+  gfinder-server:
+    build: .
+    container_name: gfinder-server
+    depends_on:
+      - gfinder-database
+      - gfinder-redis
+    volumes:
+      - ./src:/app/src
+      - .env.docker-compose:/app/.env
+    networks:
+      - gfinder-network
+
+  gfinder-nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    container_name: gfinder-nginx
+    depends_on:
+      - gfinder-server
+    environment:
+      NGINX_SERVER_NAME: localhost
+      GFINDER_HOST: gfinder-server
+      GFINDER_PORT: 3000
+      NGINX_MAX_BODY: 100M
+    ports:
+      - 5000:80
+    networks:
+      - gfinder-network
+
+  gfinder-database:
+    image: arudik/postgres-postgis-uuid
+    container_name: gfinder-database
+    environment:
+      POSTGRES_USER: gfinderapp
+      POSTGRES_PASSWORD: gfinderapp
+      POSTGRES_DB: gfinderapp
+    ports:
+      - 5432:5432
+    networks:
+      - gfinder-network
+
+  gfinder-redis:
+    image: 'bitnami/redis:latest'
+    container_name: gfinder-redis
+    environment:
+      REDIS_PASSWORD: gfinderapp
+      REDIS_USERNAME: gfinderapp
+    ports:
+      - 6379:6379
+    networks:
+      - gfinder-network
+
+networks:
+  gfinder-network:
+    driver: bridge

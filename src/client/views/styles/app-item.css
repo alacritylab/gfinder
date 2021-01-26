@@ -1,0 +1,79 @@
+.gfinder-item-row div {
+    font-family: Roboto, monospace;
+    font-style: normal;
+    margin: 8px 0;
+    letter-spacing: 0.15px;
+}
+
+.gfinder-item-store {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.gfinder-item-manufacturer {
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.gfinder-item-additional-rows div {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.gfinder-card-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.gfinder-card-image-container:hover .gfinder-card-image {
+    opacity: 0.3;
+}
+
+.gfinder-card-image-container:hover .gfinder-image-button-container {
+    opacity: 1;
+}
+
+.gfinder-card-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 185px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.gfinder-image-button-container {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.gfinder-image-button {
+    font-family: Roboto, monospace;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    cursor: pointer;
+    border-radius: 10%;
+    border: #4E4E4E solid 2px;
+    color: #4E4E4E;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+.gfinder-main-item-price {
+    text-align: center;
+    background: #EBFFF9;
+    color: #00BA88;
+    padding: 20px;
+}

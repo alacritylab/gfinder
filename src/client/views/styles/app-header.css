@@ -1,0 +1,19 @@
+.gfinder-app-header {
+    margin-top: 20px;
+    font-family: arkhipregular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.gfinder-app-name {
+    text-align: left;
+    padding-left: 5vw;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.gfinder-app-header {
+    text-align: center;
+    font-size: 36px;
+    line-height: 43px;
+}
