@@ -12,7 +12,6 @@ import AppViewTypes from '../../dto/enums/AppViewTypes';
 import DropdownFilter from '../../components/Filters/DropdownFilter';
 import GfinderPagination from '../../components/Pagination/GfinderPagination';
 import RequestService from '../../services/RequestService';
-import IFiltersResponse from '../../dto/IFiltersResponse';
 import SortTypes from '~client/views/dto/enums/SortTypes';
 import { Button } from '@material-ui/core';
 
@@ -47,7 +46,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
       listItems: this.props.items.items,
       filterCheckedState: {},
       meta: this.props.items.meta,
-      sortBy: SortTypes.DESC,
+      sortBy: SortTypes.ASC,
       page: 1
     };
   }
@@ -66,8 +65,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
       ...this.state,
       selectedFilters: [],
       filterCheckedState: {},
-    });
-    this.loadPage(this.state.page);
+    }, () => this.loadPage(this.state.page));
   }
 
   private processItemsResponse(page, itemsData): void {
@@ -92,9 +90,7 @@ class Home extends React.Component<IHomeProps, IHomeState> {
         ...this.state,
         selectedFilters: newSelectedFilters,
         filterCheckedState: newFiltersState
-      });
-
-      this.fetchItems();
+      }, this.fetchItems);
     }
   }
 
@@ -111,14 +107,11 @@ class Home extends React.Component<IHomeProps, IHomeState> {
       ...this.state,
       selectedFilters: newSelectedFiltersState,
       filterCheckedState: newFiltersState
-    });
-
-    this.fetchItems();
+    }, this.fetchItems);
   }
 
   private changeSortBy(newSort: SortTypes): void {
-    this.setState({...this.state, sortBy: newSort});
-    this.fetchItems();
+    this.setState({...this.state, sortBy: newSort}, this.fetchItems);
   }
 
   private getView(width: number): AppViewTypes {

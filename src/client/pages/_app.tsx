@@ -7,7 +7,6 @@ import '../views/styles/app-footer.css';
 import '../views/styles/app-filter.css';
 import '../views/styles/app-selected-items.css';
 import '../views/styles/item-details.css';
-import Head from 'next/head';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />

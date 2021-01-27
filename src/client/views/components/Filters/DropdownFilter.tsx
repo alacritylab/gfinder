@@ -20,8 +20,8 @@ export default class DropdownFilter extends React.Component<IDropdownFilterProps
         <Select className='gfinder-select-general'
                 value={currentSort}
                 onChange={(event) => onSortChange(event.target.value as SortTypes)}>
-          <MenuItem value={SortTypes.ASC}>Спочатку дорогi</MenuItem>
-          <MenuItem value={SortTypes.DESC}>Спочатку дешевi</MenuItem>
+          <MenuItem value={SortTypes.DESC}>Спочатку дорогi</MenuItem>
+          <MenuItem value={SortTypes.ASC}>Спочатку дешевi</MenuItem>
         </Select>
       </FormControl>
     );

@@ -1,6 +1,5 @@
 import React from 'react'
 import { NextPage } from 'next'
-import Home from '~client/views/highLevelViews/views/home';
 import Details from '~client/views/highLevelViews/views/details';
 
 interface IItemDetailsProps {
@@ -11,7 +10,7 @@ const ItemDetails: NextPage<IItemDetailsProps> = (props) => {
   return (
     <div className='gfinder-app'>
       <div className='gfinder-app-container'>
-        <Details />
+        {/*<Details />*/}
       </div>
     </div>
   );
